@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions </title>
+  <style>
+      body {background-color: grey}
+      pre { border: dashed 3px darkblue }
+      .Array {
+          color: red;
+      }
+      .String {
+          color:blue;
+      }
+  </style>
+</head>
+
+<body>
+<h2 id=title></h2>
+
+<p>
+<textarea id="inputTxt" rows="10" cols="80" onKeyUp="checkRE()">
+    let longString= "This is a very long string which needs " +
+                    "to wrap across multiple lines because " +
+                    "otherwise my code is unreadable."
+
+    var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
+    var fruits = ["Apple", "Banana", "Orange"]
+    var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+</textarea>
+</p>
+<p id=out></p>
+
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+
+<script>
+"use strict";
+function checkRE() {
+    var exp = /(\"|\').*(\"|\')/g;
+    const str = "<span class=String>$&</span><p></p>";
+    let a = inputTxt.value.replace(exp, str);
+    const exp2 = /\[.*\]|\[".*\"]|\['.*\']/g;
+    const str2 = "<span class=Array>$&</span>";
+    //let b = a.replace(exp3,str2);
+    out.innerHTML = a.replace(exp2,str2);
+
+}
+    sample.innerText = checkRE.toString();
+    checkRE();
+</script>
+
+</body>
+</html>
