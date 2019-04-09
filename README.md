@@ -11,6 +11,9 @@ Classworks
  [CW4](https://celilreha.github.io/AutomataWorks/CW4/index.html)
  
  [CW5](https://celilreha.github.io/AutomataWorks/CW5/Expression.html)
+ 
+ [CW6](https://celilreha.github.io/AutomataWorks/CW6/PDA1.html)
+
 
 
 
