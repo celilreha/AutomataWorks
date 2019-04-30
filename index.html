@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="manifest" href="manifest.json">
+    <title>Automata Works(by CRE) </title>
+    <link rel="icon" href="images/CRE.png">
+</head>
+<style>
+    html{
+        min-width: 400px;
+        max-width: 600px;
+        min-height: 600px;
+        max-height: 1000px;
+        margin:0 auto;
+    }
+    body{
+
+        background-color: black;
+        margin:0 auto;
+        font:18px Manjari;
+    }
+    li{
+        margin:0 auto;
+        width: 250px;
+        height: 20px;
+        font:16px "Manjari Bold";
+        padding: 3px 3px;
+        color: red;
+        background-color: white;
+        border:2px solid black;
+    }
+    a{
+        margin:0 auto;
+        color: black;
+        font:18px "Manjari Bold";
+
+    }
+    p{
+        color: white;
+        font:18px "Manjari Bold";
+        text-align: center;
+    }
+    h3{
+        margin:0 auto;
+        width: 250px;
+        height: 40px;
+        font:24px Ubuntu ;
+        font-weight: bold;
+        padding: 5px 5px;
+        color: darkred;
+        text-align: center;
+        background-color: white;
+        border: 5px double black;
+    }
+</style>
+
+<script>
+    self.addEventListener('install', function (event) {
+        event.waitUntil(self.skipWaiting()); // Activate worker immediately
+    });
+    self.addEventListener('activate', function (event) {
+        event.waitUntil(self.clients.claim()); // Become available to all pages
+    });
+    if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+            .register('https://celilreha.github.io/AutomataWorks/sw.js')
+            .then((reg) => { console.log('SW Registered', reg) })
+            .catch(console.log)
+        }
+  </script>
+<body>
+<p>You can check
+<a href="https://github.com/celilreha/AutomataWorks" style="color:white;" >My Repo</a>
+</p>
+<p>
+<h3>Class Works</h3>
+<br>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW1/DFA1.html">CW1</a> (DFA) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW2/index.html">CW2 </a> (DFA & NFA) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW3/RegExp.html">CW3</a> (RegExp) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW4/index.html">CW4</a> (Context-Free Grammar) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW5/Expression.html">CW5</a> (Expression) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW6/PDA1.html">CW6</a> (PDA) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/CW7/microJ3.html">CW7</a> (MicroJ Sample Program) </li>
+<p></p>
+<h3>Home Works</h3>
+<p></p>
+<li><a href="https://celilreha.github.io/AutomataWorks/HW1/index.html">HW1</a> (Array & String in IDE) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/HW2/Expression.html">HW2</a> (Expression) </li>
+<li><a href="https://celilreha.github.io/AutomataWorks/HW3/microJ1.html">HW3</a> (MicroJ) </li>
+<p></p>
+<h3>Project</h3>
+<p></p>
+<li><a href="https://celilreha.github.io/AutomataWorks/Project">Project</a> </li>
+<p></p>
+<h3>Useful Links</h3>
+<p></p>
+<li><a href="https://www.w3schools.com/js/">W3schools</a> (for JS) </li>
+<li><a href="https://stackoverflow.com/">Stackoverflow</a> </li>
+</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "Celil Reha Esgice",
+  "start_url": "https://celilreha.github.io/AutomataWorks/index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "icons": [
+    {
+      "src": "images/CRE.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

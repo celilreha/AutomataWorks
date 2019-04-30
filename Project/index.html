@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions </title>
+  <style>
+      html{
+          min-width: 400px;
+          max-width: 600px;
+          min-height: 600px;
+          max-height: 1000px;
+          margin:0 auto;
+      }
+      body{
+
+          background-color: lightgray;
+          margin:0 auto;
+          font:18px Manjari;
+      }
+      a{
+          margin:0 auto;
+          color: black;
+          font:16px "Manjari Bold";
+
+      }
+      p{
+          color: black;
+          font:16px "Manjari Bold";
+          text-align: center;
+      }
+      h2{
+          color: black;
+          font:22px "Manjari Bold";
+          text-align: center;
+      }
+      a{
+          color: blue;
+          font:14px "Manjari Bold";
+          text-align: center;
+      }
+      pre { border: dashed 3px darkblue }
+      input,select { border: double 3px black  }
+      #pat { width: 90px; }
+      #inp { width: 250px; }
+      .found { color: #ff0000; }
+  </style>
+</head>
+
+<body>
+<h2 id=title></h2>
+
+<p>
+Pattern <input type=text id=pat onKeyUp="checkRE()">&emsp; 
+<select id=menu onChange="setValues()">
+<option>Vowel<option>Number<option>Suffix<option>x+letter<option>Mastar<option>Clock
+</select> 
+</p>
+<p>
+Input <input type=text id=inp onKeyUp="checkRE()">
+</p>
+
+
+<hr />
+<p id=out></p>
+<hr />
+<h2>What is Regular Expression</h2>
+<p id=def>Regular expressions are patterns used to match character combinations in strings.
+    In JavaScript, regular expressions are also objects.
+    These patterns are used with the exec and test methods of RegExp,
+    and with the match, replace, search, and split methods of String.
+    This chapter describes JavaScript regular expressions.</p>
+
+<hr />
+<p style=font-size:14px >Ref: <a href="https://developer.mozilla.org/" >https://developer.mozilla.org/</a>
+</p>
+
+<script>
+"use strict";
+const ptrn = ["[aeıioöuü]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","m[ae]k","[0-9]{2}.[0-9]{2}"];
+const word = 
+    ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
+     "Geldim gördüm buldum...", "Excellent expression tax ",
+        "Olmak ya da olmamak, ölmek ya da ölmemek","14.20: Hello. My name is Ann <p> 14.55: Hi. I am David. Nice to meet you.",];
+function setValues() {
+    pat.value = ptrn[menu.selectedIndex];
+    inp.value = word[menu.selectedIndex];
+    checkRE();
+}
+function checkRE() {
+    if (pat.value && inp.value) {
+        const exp = new RegExp(pat.value,'g');
+        const str = "<span class=found>$&</span>";
+        out.innerHTML = inp.value.replace(exp, str);
+    }
+}
+
+    title.innerText = document.title; setValues();
+</script>
+
+</body>
+</html>
