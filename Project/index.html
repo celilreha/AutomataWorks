@@ -71,7 +71,12 @@
       label{
           margin-left: 5px;
       }
-
+        #out{
+            width: auto;
+            background-color: white;
+            font:16px "Manjari Bold";
+            text-align: center;
+        }
       .found { color: #ff0000; }
   </style>
 </head>
@@ -82,7 +87,7 @@
     <a  href="#head1" onclick="setValues(ptrn[0],word[0])" >Mail</a>
     <a  href="#head1" onclick="setValues(ptrn[1],word[1])" >Date</a>
     <a  href="#head1" onclick="setValues(ptrn[2],word[2])" >Matematichal Operations</a>
-    <a  href="#head1" onclick="setValues(ptrn[3],word[3])" >11 Digit Phone Number</a>
+    <a  href="#head1" onclick="setValues(ptrn[3],word[3])" >Number</a>
     <a  href="#head1" onclick="setValues(ptrn[4],word[4])" >Phone Number</a>
     <a  href="#head1" onclick="setValues(ptrn[5],word[5])" >Clock</a>
 </div>
@@ -145,14 +150,15 @@
 </p>
 <p style=font-size:14px >Ref: <a href="https://developer.mozilla.org/" >Developer Mozilla</a></p>
 <p style=font-size:14px >Ref: <a href="https://regexr.com/" >Regexr</a></p>
+<p style=font-size:14px >You can check my <a href="https://celilreha.github.io/AutomataWorks/" >Main Page</a></p>
 <script>
 "use strict";
 const ptrn = [".+@[a-z]+.com", "[0-9]{1,2}[./][0-9]{1,2}[./][0-9]{4}",
-    "([-+]?[0-9]*.?[0-9]+[\\/\\+\\-\\*])+([-+]?[0-9]*.?[0-9]+)", "x[a-z]","0[0-9]{10}","[0-9]{2}[.:][0-9]{2}"];
+    "([-+]?[0-9]*.?[0-9]+[\\/\\+\\-\\*])+([-+]?[0-9]*.?[0-9]+)", "[0-9]","0[0-9]{10}","[0-9]{2}[.:][0-9]{2}"];
 const word = 
-    ["example@hotmail.com Example_123@hotmail.com Example ", "Bugün 23/6/2018 saat 14",
-     "Geldim gördüm buldum...", "Excellent expression tax ",
-        "05216478954 05a26421671","14.20: Hello. My name is Ann <hr> 14.55: Hi. I am David. Nice to meet you.",];
+    ["example@hotmail.com Example_123@hotmail.com Example ", "Today is 06/05/2019 or 06.05.2019",
+     "toplama:3+5=8<br>çarpma:9*2=18<br>bölme:9/3=3<br>çıkarma:17-10=7", "There are 7 apples and 3 banana ",
+        "05216478954 05a26421671","14.20: Hello. My name is Ann <br> 14.55: Hi. I am David. Nice to meet you.",];
 function setValues(a,b) {
     pat.value = a;
     inp.value = b;
